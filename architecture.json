@@ -1,0 +1,59 @@
+{
+    "language": "Python",
+    "dependency_file": "requirements.txt",
+    "dependencies": ["numpy", "matplotlib", "pandas", "seaborn"],
+    "files": [
+        {
+            "path": "src/smellmap_analyzer.py",
+            "description": "Core module for generating, visualizing, and analyzing striped olfactory receptor maps",
+            "exports": [
+                "class SmellMapAnalyzer",
+                "function generate_striped_map(int, int, list)",
+                "function visualize_map(array, str, str)",
+                "function simulate_odor_profile(list)",
+                "function process_odor_through_stripes(dict)",
+                "function analyze_receptor_distribution(array)",
+                "function plot_receptor_distribution(dict)",
+                "function analyze_striped_organization(array)"
+            ]
+        },
+        {
+            "path": "src/visualization.py",
+            "description": "Handles all visualization logic including plotting of receptor maps and distributions",
+            "exports": [
+                "function plot_striped_map(array, str)",
+                "function plot_distribution_heatmap(dict, str)"
+            ]
+        },
+        {
+            "path": "src/simulation.py",
+            "description": "Simulates odor processing through striped receptor pathways",
+            "exports": [
+                "function simulate_odor_profile(list)",
+                "function process_odor_through_stripes(dict)"
+            ]
+        },
+        {
+            "path": "src/analysis.py",
+            "description": "Performs statistical analysis of receptor distributions and striped organization",
+            "exports": [
+                "function analyze_receptor_distribution(array)",
+                "function analyze_striped_organization(array)"
+            ]
+        },
+        {
+            "path": "src/data_generation.py",
+            "description": "Generates synthetic striped receptor maps based on parameters",
+            "exports": [
+                "function generate_striped_map(int, int, list)"
+            ]
+        },
+        {
+            "path": "src/__main__.py",
+            "description": "Main entry point for running the tool directly from command line",
+            "imports_from_other_files": [
+                "smellmap_analyzer.py"
+            ]
+        }
+    ]
+}
